@@ -1,12 +1,14 @@
 <template>
+  <h1>Timer</h1>
   <main>
-    <h1>Timer</h1>
     <TimerDisplay @timer-time-change="handleTimeSetChange" :timeObj="timeObj" :isActive="isActive" />
-    <Button v-if="isActive" @click="cancelTimer">CANCEL</Button>
-    <Button v-else @click="startTimer()">START</Button>
-    <Button @click="handleShareClick" :disabled="!isActive">
-      {{ urlCopied ? 'URL copied to clipboard!' : 'SHARE' }}
-    </Button>
+    <div class="button-group">
+      <Button v-if="isActive" @click="cancelTimer">CANCEL</Button>
+      <Button v-else @click="startTimer()">START</Button>
+      <Button @click="handleShareClick" :disabled="!isActive">
+        {{ urlCopied ? 'URL copied to clipboard!' : 'SHARE' }}
+      </Button>
+    </div>
   </main>
 </template>
 

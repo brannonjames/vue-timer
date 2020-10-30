@@ -74,5 +74,8 @@ export default {
       margin: 0;
       font-size: 22vw;
     }
+    img {
+      height: 100px;
+    }
   }
 </style>
