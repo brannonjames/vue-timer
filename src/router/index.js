@@ -4,9 +4,10 @@ import StopwatchView from '../views/Stopwatch'
 
 const routes = [
   {
-    path: '/timer',
+    path: '/timer/:date?',
     name: 'timer',
-    component: TimerView
+    component: TimerView,
+    alias: '/timer'
   },
   {
     path: '/stopwatch',
