@@ -70,9 +70,7 @@ export default {
           this.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
           this.seconds = Math.floor((difference % (1000 * 60)) / 1000)
         } else {
-          this.$router.replace({ name: 'timer', params: { date: '' } })
-          this.isActive = false
-          clearInterval(this.timer)
+          this.cancelTimer()
         }
       }, 500)
     },
@@ -83,6 +81,7 @@ export default {
       this.minutes = 0
       this.seconds = 0
       this.isActive = false
+      this.$router.replace({ name: 'timer', params: { date: '' } })
     },
     async handleShareClick () {
       //

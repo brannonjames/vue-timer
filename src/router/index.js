@@ -10,9 +10,10 @@ const routes = [
     alias: '/timer'
   },
   {
-    path: '/stopwatch',
+    path: '/stopwatch/:date?',
     name: 'stopwatch',
-    component: StopwatchView
+    component: StopwatchView,
+    alias: '/stopwatch'
   },
   {
     path: '/',
